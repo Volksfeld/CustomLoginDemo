@@ -70,12 +70,12 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="hGT-Nn-B9V">
                                 <rect key="frame" x="40" y="84" width="334" height="230.5"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eKA-jf-Rea">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eKA-jf-Rea">
                                         <rect key="frame" x="0.0" y="0.0" width="334" height="50"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jVB-nb-ZzO">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jVB-nb-ZzO">
                                         <rect key="frame" x="0.0" y="70" width="334" height="50"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -90,7 +90,7 @@
                                             <action selector="loginTapped:" destination="eZ0-4m-PW1" eventType="touchUpInside" id="iTJ-SY-aof"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Irs-sb-dGE">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Irs-sb-dGE">
                                         <rect key="frame" x="0.0" y="210" width="334" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -113,10 +113,10 @@
                     </view>
                     <navigationItem key="navigationItem" id="DJ1-Iz-T7c"/>
                     <connections>
+                        <outlet property="emailTextField" destination="eKA-jf-Rea" id="EoE-MH-bfW"/>
                         <outlet property="errorLabel" destination="Irs-sb-dGE" id="bEu-m3-3qv"/>
-                        <outlet property="firstNameTextField" destination="eKA-jf-Rea" id="NjZ-4u-4Km"/>
-                        <outlet property="lastNameTextField" destination="jVB-nb-ZzO" id="xbo-q8-q90"/>
                         <outlet property="loginButton" destination="12K-WL-feX" id="Xwg-Ra-Qwm"/>
+                        <outlet property="passwordTextField" destination="jVB-nb-ZzO" id="2HP-o8-M0x"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vRM-XQ-ME0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -126,7 +126,7 @@
         <!--Home View Controller-->
         <scene sceneID="76T-xy-6Pv">
             <objects>
-                <viewController id="U1n-Be-Shj" customClass="HomeViewController" customModule="CustomLoginDemo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeVC" id="U1n-Be-Shj" customClass="HomeViewController" customModule="CustomLoginDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="o4J-Di-xPd">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -191,7 +191,7 @@
                                             <action selector="signUpTapped:" destination="YDt-qp-KsS" eventType="touchUpInside" id="U2s-CZ-Q3d"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hax-Bd-pY9">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hax-Bd-pY9">
                                         <rect key="frame" x="0.0" y="350" width="334" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
